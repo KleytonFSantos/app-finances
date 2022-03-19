@@ -4,6 +4,8 @@
     --green: #fb92b3;
     --light-green: #ffdae7;
     --red: #e92929;
+    --white: white;
+    --light-white: #fb92b3;
 }
 
 * {
@@ -11,6 +13,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.dark-theme-variables {
+    --white: #3a4555;
+    --color-white: #202528;
+    --dark-blue: white;
+    --color-dark-variant: #a3bdcc;
+    --strong-green: #3a4555;
+    --green: #596370;
+    --light-white: #f1f1f1;
 }
 
 .container {
@@ -47,7 +59,7 @@ background: var(--light-green);
 }
 
 .button.cancel {
-color: var(--strong-green);
+color: var(--light-white);
 border: 2px rgb(71, 43, 57) solid;
 border-radius: 0.75rem;
 height: 50px;
@@ -73,7 +85,7 @@ html {
 }
 
 body {
-    background: #e5eef0dc;
+    background: var(--white);
     font-family: 'poppins', sans-serif;
 }
 
@@ -100,6 +112,32 @@ header {
     font-weight: 100;
 }
 
+.theme-toggler {
+    background: rgba(132, 139, 200, 0.18);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.theme-toggler span {
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggler span.active {
+    background: transparent;
+    color: white;
+    border-radius: 6px;
+}
+
 #balance {
     margin-top: -8rem;
 }
@@ -124,7 +162,7 @@ header {
 }
 
 table th {
-    background: white;
+    background: var(--white);
     font-weight: normal;
     padding: 1rem 2rem;
     text-align: left;
@@ -148,6 +186,7 @@ table tbody tr td:last-child {
 table td {
     background: white;
     padding: 1rem 2rem;
+    
 
 }
 
@@ -165,7 +204,7 @@ table tbody td {
 }
 
 .description {
-    color: var(--dark-blue);
+    color: #010006;
 }
 
 .income {
@@ -177,12 +216,22 @@ table tbody td {
 }
 
 .card {
-    background: white;
+    background: var(--white);
     padding: 1.5rem 2rem;
     border-radius: 0.75rem;
     margin-bottom: 2rem;
+    border: 1px solid white;
     color: var(--dark-blue);
+    box-shadow: none;
+    transition: all 300ms ease;
 }
+
+.card:hover {
+    
+    box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+}
+
+
 
 .card h3 {
     font-weight: normal;
@@ -225,7 +274,7 @@ table tbody td {
 }
 
 .modal {
-background: #f0f2f5;
+background: var(--white);
 padding: 2.4rem;
 position: relative;
 z-index: 1;
